@@ -13,14 +13,13 @@ const App = (props) => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
-    // import action from /actions/actions.js
+    // import action from /actions/actions.js above
     props.removeFeature(item)
   };
 
   const buyItem = item => {
     // dipsatch an action here to add an item
-    // import action from /actions/actions.js
-    // item.preventDefault();
+    // import action from /actions/actions.js above
     props.buyItem(item)
   };
 
@@ -49,8 +48,4 @@ const mapStateToProps = state => {
   return state;
 }
 
-// export default App;
-export default connect(
-  mapStateToProps,
-  {buyItem}
-)(App);
+export default connect(mapStateToProps,{buyItem, removeFeature})(App);
